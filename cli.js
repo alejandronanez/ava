@@ -121,7 +121,7 @@ if (
 	process.exit(1);
 }
 
-function exit (code) {
+function exit(code) {
 	// TODO: figure out why this needs to be here to
 	// correctly flush the output when multiple test files
 	process.stdout.write('');
@@ -129,7 +129,7 @@ function exit (code) {
 
 	// timeout required to correctly flush IO on Node.js 0.10 on Windows
 	setTimeout(function () {
-		process.exit(code); // eslint-disable-line
+		process.exit(code); // eslint-disable-line xo/no-process-exit
 	}, process.env.AVA_APPVEYOR ? 500 : 0);
 }
 

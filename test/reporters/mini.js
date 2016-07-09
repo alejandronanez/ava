@@ -75,7 +75,7 @@ test('passing test', function (t) {
 		' ' + graySpinner + ' passed',
 		'',
 		'   ' + chalk.green('1 passed')
-	].join('\n')
+	].join('\n');
 
 	t.is(actualOutput, expectedOutput);
 	t.end();
